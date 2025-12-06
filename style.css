@@ -1,0 +1,363 @@
+/* =========================================================
+   GLOBAL / BASE STYLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #cfeeed;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 40px 0;
+}
+
+
+/* Typography */
+h1,
+h2,
+h3 {
+    color: #1b2a41;
+    margin: 0 0 12px;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.7;
+    margin: 6px 0;
+}
+
+/* Make sure top section isn't hidden behind navbar */
+#home {
+    padding-top: 80px;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+
+    position: fixed;         /* always fixed on top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 60px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: #00b8a9;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #00b8a9;
+}
+
+/* =========================================================
+   PROFILE / HERO SECTION
+   ========================================================= */
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-section img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00b8a9;
+    margin-bottom: 15px;
+}
+
+.profile-section h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #1b2a41;
+    font-weight: 600;
+}
+
+.profile-section p {
+    font-size: 18px;
+    color: #444;
+    margin: 5px 0 20px;
+}
+
+/* Social icons under profile & in card */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links .social-icon {
+    font-size: 30px;
+    color: #00b8a9;
+    transition: 0.3s;
+}
+
+.social-links .social-icon:hover {
+    color: #007a70;
+    transform: scale(1.2);
+}
+
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 60px auto;
+    width: 80%;
+}
+
+.about-section img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00b8a9;
+}
+
+.about-text {
+    max-width: 450px;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+    font-size: 32px;
+    color: #1b2a41;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.about-btn {
+    background-color: #00b8a9;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background-color: #008f82;
+    transform: scale(1.05);
+}
+
+/* Responsive about layout */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+}
+
+/* =========================================================
+   SKILLS SECTION
+   ========================================================= */
+
+.skills-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.skills-section h2 {
+    font-size: 28px;
+    color: #1b2a41;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill {
+    background-color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #00b8a9;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.skill:hover {
+    background-color: #00b8a9;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+
+/* =========================================================
+   PROJECTS SECTION
+   ========================================================= */
+
+#projects {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project-card {
+    width: 280px;
+    padding: 20px;
+    border: 2px solid #00b8a9;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    background-color: #ffffff;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00b8a9;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background-color: #007d66;
+}
+
+.project-btn.disabled {
+    background-color: #aaa;
+    pointer-events: none;
+}
+
+/* =========================================================
+   MAIN CARD / MESSAGE SECTION
+   ========================================================= */
+
+.container {
+    background-color: #ffffff;
+    max-width: 650px;
+    margin: 15px auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(109, 220, 176, 0.12);
+    text-align: center;
+    border: 2px solid #67c9c1;
+    transition: 0.2s;
+}
+
+.container:hover {
+    border-color: #009f88;
+    transform: scale(1.01);
+}
+
+.button-area {
+    margin-top: 20px;
+}
+
+/* =========================================================
+   CONTACT & FOOTER
+   ========================================================= */
+
+#contact {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    background: #ffffff; /* optional */
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-text {
+    color: #666;
+    font-size: 14px;
+    opacity: 0.85;
+}
+/* =========================================================
+   SCROLL REVEAL ANIMATION
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.reveal.delay-1 {
+    transition-delay: 0.15s;
+}
+
+.reveal.delay-2 {
+    transition-delay: 0.3s;
+}

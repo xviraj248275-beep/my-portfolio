@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+  <nav class="navbar">
+    <div class="logo">Viraj</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+    <!-- =================== MAIN CONTENT =================== -->
+    <main>
+        <!-- ---------- HOME / PROFILE SECTION ---------- -->
+        <section id="home" class="profile-section reveal">
+            <img src="c:\web development journy\day 1\profile.jpg" alt="profile" />
+
+            <h2>Viraj D. Gaidhane</h2>
+            <p>Web Developer</p>
+
+            <div class="social-links">
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-github"></i
+                ></a>
+
+                <a
+                    href="https://www.instagram.com/hzd_viraj.24_/"
+                    class="social-icon instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin"></i
+                ></a>
+            </div>
+        </section>
+
+        <!-- ---------- ABOUT SECTION ---------- -->
+        
+        <section id="about">
+  <div class="about-section reveal">
+    <div class="about-image">
+        <img src="c:\web development journy\day 1\profile.jpg" alt="profile">
+    </div>
+
+    <div class="about-text">
+        <h2>About Me</h2>
+        <p>I'm Viraj, a passionate learner exploring the world of web development...</p>
+        <button class="about-btn">Download Resume</button>
+    </div>
+  </div>
+</section>
+
+
+        <!-- ---------- SKILLS SECTION ---------- -->
+        <section id="skills" class="reveal">
+            <div class="skills-section">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">PHP</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- PROJECTS SECTION ---------- -->
+        <section id="projects" class="reveal">
+          <h2>Projects</h2>
+                <div class="project-container">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        This is the site you're viewing — built using HTML, CSS,
+                        and JavaScript (coming soon).
+                    </p>
+                    <a href="#" class="project-btn">View</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Coming Soon 🚧</h3>
+                    <p>
+                        More projects will be added as I improve my skills.
+                    </p>
+                    <a href="#" class="project-btn disabled">Not Ready</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- INTRO / MESSAGE CARD SECTION ---------- -->
+        <section id="intro" class="reveal">
+               <div class="container">
+                <h1>Hello, I'm Viraj 👋</h1>
+                <p>This is my first styled webpage.</p>
+                <p>Welcome to my webpage, guys.</p>
+                <p>Have a great day.</p>
+
+                <p class="footer-text">Made with ❤️ by Viraj</p>
+            </div>
+        </section>
+
+        <!-- ---------- CONTACT SECTION (SIMPLE FOR NOW) ---------- -->
+        <section id="contact" class="contact-section reveal">
+            <h2>Contact</h2>
+            <p>Email: viraj8275@gmail.com</p>
+        </section>
+    </main>
+
+    <!-- =================== FOOTER =================== -->
+    <footer>
+        <p class="footer-text">© 2025 Viraj. All rights reserved.</p>
+    </footer>
+
+    <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target); // animate only once
+        }
+      });
+    },
+    {
+      threshold: 0.15 // 15% visible = trigger
+    }
+  );
+
+  reveals.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+
+</body>
+</html>
