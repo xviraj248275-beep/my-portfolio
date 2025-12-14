@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" sizes="32x32" href="c:\web development journy\day 1\ChatGPT Image Dec 10, 2025, 11_38_57 PM.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
@@ -32,47 +34,53 @@
     <!-- =================== MAIN CONTENT =================== -->
     <main>
         <!-- ---------- HOME / PROFILE SECTION ---------- -->
-        <section id="home" class="profile-section reveal">
-            <img src="c:\web development journy\day 1\profile.jpg" alt="profile" />
+      <!-- PROFILE / HERO -->
+<section id="home" class="profile-section reveal">
+  <img src="profile.jpg" alt="Viraj profile photo" />
+  <h2>Viraj D. Gaidhane</h2>
+  <p class="role">Web Developer</p>
 
-            <h2>Viraj D. Gaidhane</h2>
-            <p>Web Developer</p>
+  <div class="social-links">
+    <!-- put your real links here -->
+    <a href="https://github.com/YOUR-GITHUB-USERNAME" class="social-icon" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i>
+    </a>
 
-            <div class="social-links">
-                <a href="#" class="social-icon"
-                    ><i class="fab fa-github"></i
-                ></a>
+    <a href="https://www.instagram.com/hzd_viraj.24_/" class="social-icon instagram" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+    </a>
 
-                <a
-                    href="https://www.instagram.com/hzd_viraj.24_/"
-                    class="social-icon instagram"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i class="fab fa-instagram"></i>
-                </a>
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="social-icon" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</section>
 
-                <a href="#" class="social-icon"
-                    ><i class="fab fa-linkedin"></i
-                ></a>
-            </div>
-        </section>
+
 
         <!-- ---------- ABOUT SECTION ---------- -->
         
-        <section id="about">
-  <div class="about-section reveal">
+      <!-- ABOUT TEXT -->
+<section id="about" class="reveal">
+  <div class="about-section">
     <div class="about-image">
-        <img src="c:\web development journy\day 1\profile.jpg" alt="profile">
+      <img src="profile.jpg" alt="Viraj profile photo" />
     </div>
 
     <div class="about-text">
-        <h2>About Me</h2>
-        <p>I'm Viraj, a passionate learner exploring the world of web development...</p>
-        <button class="about-btn">Download Resume</button>
+      <h2>About Me</h2>
+      <p>
+        I’m Viraj — a Web Developer focused on building clean, responsive, and accessible web experiences.
+        I work with HTML, CSS, and JavaScript to create interfaces that are easy to use and look modern.
+        I’m continuously learning new tools and shipping small projects to showcase my skills.
+      </p>
+
+      <!-- If you have resume.pdf put it in the project root so this download works -->
+      <a href="resume.pdf" class="about-btn" download>Download Resume</a>
     </div>
   </div>
 </section>
+
 
 
         <!-- ---------- SKILLS SECTION ---------- -->
@@ -124,11 +132,26 @@
         </section>
 
         <!-- ---------- CONTACT SECTION (SIMPLE FOR NOW) ---------- -->
-        <section id="contact" class="contact-section reveal">
-            <h2>Contact</h2>
-            <p>Email: viraj8275@gmail.com</p>
-        </section>
-    </main>
+       <section id="contact" class="contact-section reveal">
+    <h2>Contact</h2>
+
+    <p>
+        Email:
+        <a href="mailto:viraj8275@gmail.com" class="contact-link">
+            viraj8275@gmail.com
+        </a>
+    </p>
+
+    <p>
+        WhatsApp:
+        <a href="https://wa.me/918010497830?text=Hi%20Viraj%2C%20I%20just%20saw%20your%20portfolio!" 
+           target="_blank" 
+           class="contact-link">
+            Chat on WhatsApp
+        </a>
+    </p>
+</section>
+
 
     <!-- =================== FOOTER =================== -->
     <footer>
@@ -155,6 +178,29 @@
   reveals.forEach(section => {
     observer.observe(section);
   });
+</script>
+
+<script>
+// NAV HIGHLIGHT ON SCROLL
+document.addEventListener('DOMContentLoaded', function () {
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      const navLink = document.querySelector('.nav-links a[href="#' + id + '"]');
+
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        if (navLink) navLink.classList.add('active');
+      }
+    });
+  }, { threshold: 0.45 });  // Adjust sensitivity if needed
+
+  sections.forEach(section => observer.observe(section));
+});
 </script>
 
 

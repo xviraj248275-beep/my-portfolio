@@ -83,6 +83,24 @@ p {
     color: #00b8a9;
 }
 
+/* ===== Active nav highlight ===== */
+.nav-links a.active {
+    color: #00b8a9;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #00b8a9;
+    bottom: -8px;
+    border-radius: 2px;
+}
+
 /* =========================================================
    PROFILE / HERO SECTION
    ========================================================= */
@@ -340,6 +358,18 @@ footer {
     font-size: 14px;
     opacity: 0.85;
 }
+
+.contact-link {
+    color: #00b8a9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    color: #007a70;
+    text-decoration: underline;
+}
+
 /* =========================================================
    SCROLL REVEAL ANIMATION
    ========================================================= */
@@ -360,4 +390,56 @@ footer {
 
 .reveal.delay-2 {
     transition-delay: 0.3s;
+}
+/* ========== RESPONSIVE / MOBILE ADJUSTMENTS ========== */
+
+/* base adjustments for smaller screens (tablets) */
+@media (max-width: 1024px) {
+  .navbar { padding: 12px 30px; }
+  .logo { font-size: 22px; }
+  .profile-section img { width: 140px; height: 140px; }
+  .about-section { width: 90%; gap: 24px; }
+  .about-section img { width: 160px; height: 160px; }
+  .container { margin: 20px 20px; padding: 28px; }
+}
+
+/* mobile layout */
+@media (max-width: 768px) {
+  body { padding: 20px 0; }
+
+  /* Navbar */
+  .nav-links { gap: 14px; font-size: 16px; }
+
+  /* Stack about columns */
+  .about-section {
+    flex-direction: column;
+    width: 92%;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .about-section img { width: 140px; height: 140px; }
+
+  /* Skills and project cards adjust */
+  .skills-container { gap: 12px; padding: 0 12px; }
+  .skill { padding: 10px 14px; font-size: 16px; }
+
+  .project-card { width: 100%; max-width: 440px; }
+
+  /* Hero spacing */
+  #home { padding-top: 100px; }
+  .profile-section h2 { font-size: 26px; }
+  .profile-section p { font-size: 16px; }
+
+  .container { max-width: 92%; padding: 20px; }
+}
+
+/* very small phones */
+@media (max-width: 420px) {
+  .logo { font-size: 20px; }
+  .nav-links a { font-size: 15px; }
+  .profile-section img { width: 120px; height: 120px; }
+  .about-section img { width: 120px; height: 120px; }
+  .about-text h2 { font-size: 22px; }
+  .skill { padding: 10px 12px; font-size: 15px; }
 }
