@@ -162,6 +162,8 @@ p {
     gap: 40px;
     margin: 60px auto;
     width: 80%;
+    padding: 40px;
+
 }
 
 .about-section img {
@@ -466,3 +468,42 @@ section {
 .about-text p {
   margin: 0 0 20px 0;   /* consistent spacing */
 }
+/* OUTRO SECTION */
+.outro-section {
+    margin: 100px 0 40px;
+}
+
+.outro-box {
+    background-color: #f5fbfa;
+    border-radius: 20px;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+/* Outro heading */
+.outro-box h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #1b2a41;
+}
+
+/* Outro text */
+.outro-box p {
+    font-size: 18px;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
+
+/* Soft closing line */
+.outro-note {
+    font-size: 16px;
+    color: #666;
+}
+
+.footer-text2 { 
+    font-size: 8px;
+
+   
+} 
+  
