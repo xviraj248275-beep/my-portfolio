@@ -501,8 +501,9 @@ section {
     color: #666;
 }
 
-.footer-text2 { 
-    font-size: 8px;
+.footer-text { 
+    font-size: 12px;
+    margin: 0 auto;
 
    
 } 
